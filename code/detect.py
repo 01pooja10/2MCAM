@@ -75,8 +75,7 @@ while(cap.isOpened()):
                 y_dist = (b[k] - b[i])
                 d = np.linalg.norm(x_dist-y_dist)
                 distance.append(d)
-                if(d <=50):
-                    print("HELLO")
+                if(d <= 220):
                     nsd.append(i)
                     nsd.append(k)
                 nsd = list(dict.fromkeys(nsd))
