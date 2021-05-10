@@ -1,5 +1,5 @@
 import streamlit as st
-
+from detect import detector
 
 
 menu = ['Welcome', 'Social distancing detector', 'Learn more!']
@@ -13,7 +13,10 @@ if option == 'Welcome':
 
 elif option == 'Social distancing detector':
     st.title('Social Distancing Detection')
-    pass
+    st.write('The practice of social distancing signifies maintaining a distance of 6 feet or more when in public places or simply staying at home and away from others as much as possible to help prevent spread of COVID-19.')
+    st.write('A green/red bounding box is drawn over the individuals in the frame to approve or flag the distance between them. ')
+    if st.button("Start"):
+        detector()
 elif option=='Learn more!':
     st.title('Why 2MCAM?')
     st.image('data/img1.jpg')
