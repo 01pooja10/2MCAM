@@ -34,7 +34,7 @@ def detector(cap,ph):
         start = time.time()
         layerOutputs = net.forward(ln)
         end = time.time()
-        print("Prediction time/frame : {:.6f} seconds".format(end - start))
+        #print("Prediction time/frame : {:.6f} seconds".format(end - start))
         boxes = []
         confidences = []
         classIDs = []
