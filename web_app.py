@@ -24,6 +24,7 @@ elif option == 'Social distancing detector':
         cap = cv2.VideoCapture(0)
         ph = st.empty()
         detector(cap,ph)
+        st.stop()
         cap.release()
         cv2.destroyAllWindows()
 elif option=='Learn more!':
