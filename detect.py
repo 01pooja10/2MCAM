@@ -6,7 +6,7 @@ import imutils
 import streamlit as st
 
 
-def detector():
+def detector(cap,ph):
     labelsPath = r"dependencies/coco.names"
     LABELS = open(labelsPath).read().strip().split("\n")
 
@@ -20,8 +20,8 @@ def detector():
     net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 
     st.write("Starting Camera ...")
-    cap = cv2.VideoCapture(0)
-    ph = st.empty()
+    #cap = cv2.VideoCapture(0)
+    #ph = st.empty()
 
     while(cap.isOpened()):
         ret, image = cap.read()
@@ -107,5 +107,5 @@ def detector():
         key = cv2.waitKey(1)
         if key==27:
             break
-    cap.release()
-    cv2.destroyAllWindows()
+    #cap.release()
+    #cv2.destroyAllWindows()
