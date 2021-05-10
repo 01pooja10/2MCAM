@@ -23,7 +23,7 @@ def detector():
     cap = cv2.VideoCapture(0)
     ph = st.empty()
 
-    while True:
+    while(cap.isOpened()):
         ret, image = cap.read()
         image = imutils.resize(image, width=800)
         (H, W) = image.shape[:2]
