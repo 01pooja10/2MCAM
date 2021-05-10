@@ -20,7 +20,7 @@ def detector():
     net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 
     st.write("Starting Camera ...")
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(-1)
     ph = st.empty()
 
     while(cap.isOpened()):
