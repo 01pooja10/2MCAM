@@ -20,7 +20,7 @@ def detector():
     net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 
     st.write("Starting Camera ...")
-    cap = cv2.VideoCapture(-1)
+    cap = cv2.VideoCapture(0)
     ph = st.empty()
 
     while(cap.isOpened()):
@@ -34,7 +34,6 @@ def detector():
         start = time.time()
         layerOutputs = net.forward(ln)
         end = time.time()
-        #print("Prediction time/frame : {:.6f} seconds".format(end - start))
         boxes = []
         confidences = []
         classIDs = []
