@@ -20,7 +20,7 @@ elif option == 'Social distancing detector':
         ph = st.empty()
         detector(cap,ph)
         cap.release()
-        #cv2.destroyAllWindows()
+        cv2.destroyAllWindows()
 elif option=='Learn more!':
     st.title('Why 2MCAM?')
     st.image('data/img1.jpg')
