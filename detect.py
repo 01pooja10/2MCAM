@@ -7,14 +7,14 @@ import streamlit as st
 
 
 def detector():
-    labelsPath = r"dependencies\coco.names"
+    labelsPath = r"dependencies/coco.names"
     LABELS = open(labelsPath).read().strip().split("\n")
 
     np.random.seed(42)
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3),dtype="uint8")
 
-    weightsPath = r"dependencies\yolov3.weights"
-    configPath = r"dependencies\yolov3.cfg"
+    weightsPath = r"dependencies/yolov3.weights"
+    configPath = r"dependencies/yolov3.cfg"
 
     st.write("Loading Machine Learning Model ...")
     net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
