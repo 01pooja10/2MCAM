@@ -5,6 +5,9 @@ import numpy as np
 import time
 import math
 import imutils
+import warnings
+
+warnings.filterwarnings('ignore')
 
 
 menu = ['Welcome', 'Social distancing detector', 'Learn more!']
