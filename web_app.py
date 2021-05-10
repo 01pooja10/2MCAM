@@ -21,12 +21,9 @@ elif option == 'Social distancing detector':
     st.write('The practice of social distancing signifies maintaining a distance of 6 feet or more when in public places or simply staying at home and away from others as much as possible to help prevent spread of COVID-19.')
     st.write('A green/red bounding box is drawn over the individuals in the frame to approve or flag the distance between them. ')
     if st.button("Start"):
-        cap = cv2.VideoCapture(0)
-        ph = st.empty()
-        detector(cap,ph)
-        st.stop()
-        cap.release()
-        cv2.destroyAllWindows()
+
+        detector()
+
 elif option=='Learn more!':
     st.title('Why 2MCAM?')
     st.image('data/img1.jpg')
